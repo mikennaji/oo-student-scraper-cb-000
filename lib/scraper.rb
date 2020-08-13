@@ -23,12 +23,14 @@ class Scraper
     html = open(profile_url)
     page = Nokogiri::HTML(html)
     cards = page.css("div.social-icon-container")
+    if cards.css("a").length >=4
     profile = {
       twitter: cards.css("a"[0]).attribute("href").text,
-      linkedin: cards.css("a"[2]).attribute("href").text,
+      linkedin: cards.css("a"[1]).attribute("href").text,
       github: cards.css("a"[2]).attribute("href").text,
-      blog: cards.css("a"[2]).attribute("href").text,
+      blog: cards.css("a"[3]).attribute("href").text,
     }
+  end
     puts profile
   end
 
