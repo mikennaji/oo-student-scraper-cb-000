@@ -30,6 +30,9 @@ class Scraper
       github: cards.css("a"[2]).attribute("href").text,
       blog: cards.css("a"[3]).attribute("href").text,
     }
+  else  
+    profile {
+    }
   end
     puts profile
   end
