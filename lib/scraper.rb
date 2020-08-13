@@ -34,7 +34,7 @@ class Scraper
     profile = {
     }
   end
-    puts profile
+    return profile
   end
 
 end
