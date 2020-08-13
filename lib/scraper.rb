@@ -31,7 +31,7 @@ class Scraper
       blog: cards.css("a"[3]).attribute("href").text,
     }
   else
-    profile {
+    profile = {
     }
   end
     puts profile
